@@ -1,14 +1,14 @@
-let gosound = "https://drive.google.com/uc?id=1Yk7T0V6s72ntR6nMdIdncDiYaBUeRVN7";
-let bgm = "https://drive.google.com/uc?id=1xocToLUmQZSsvzEnUHpH17Q-CenJ3r4S";
-let fdsnd = "https://drive.google.com/uc?id=1CXcZ_U-HFV7J0bJOXruOFvtWTc13VIZx";
-let rtn = "https://drive.google.com/uc?id=1ivhtvujpkK5vDN16An7nfIpLnCcWHPF4";
+// let gosound = "https://drive.google.com/uc?id=1Yk7T0V6s72ntR6nMdIdncDiYaBUeRVN7";
+// let bgm = "https://drive.google.com/uc?id=1xocToLUmQZSsvzEnUHpH17Q-CenJ3r4S";
+// let fdsnd = "https://drive.google.com/uc?id=1CXcZ_U-HFV7J0bJOXruOFvtWTc13VIZx";
+// let rtn = "https://drive.google.com/uc?id=1ivhtvujpkK5vDN16An7nfIpLnCcWHPF4";
 
 let inputdir={x:0,y:0};
-const mainaudio= new Audio("bgm");
-const foodsound = new Audio("fdsnd");
-const rotation = new Audio("rtn");
-const gameover = new Audio("gosound");
-const gameover2 = new Audio("rahulji.mp3");
+// const mainaudio= new Audio("bgm");
+// const foodsound = new Audio("fdsnd");
+// const rotation = new Audio("rtn");
+// const gameover = new Audio("gosound");
+// const gameover2 = new Audio("rahulji.mp3");
 let speed=5;
 let score=0;
 let lastpaintedtime=0;
@@ -56,7 +56,7 @@ function iscollide(sarr){
         }
     }
     if(snakeArr[0].x<0 || snakeArr[0].y<0 || snakeArr[0].y>18 || snakeArr[0].x>18){
-        gameover.play();
+        // gameover.play();
         return true;
     }
     return false;
@@ -66,8 +66,8 @@ function gameEngine(){
 
     //if snake collides
     if(iscollide(snakeArr)){
-        mainaudio.pause();
-        gameover.play();
+        // mainaudio.pause();
+        // gameover.play();
         //gameover2.play();
         inputdir={x:0,y:0};
         alert("Reload the page and click restart to play again");
@@ -135,7 +135,7 @@ window.requestAnimationFrame(main);
 
 window.addEventListener('keydown',e=>{
     inputdir = {x:0,y:0};
-    mainaudio.play();
+    // mainaudio.play();
     switch (e.key) {
         case 'ArrowUp':
             console.log("moving up");
